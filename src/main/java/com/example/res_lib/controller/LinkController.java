@@ -11,7 +11,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/links")
-@CrossOrigin(origins = "http://localhost:3000") // Ensure the frontend URL is correct
+@CrossOrigin(origins = "learn-frontapp.azurewebsites.net") // Ensure the frontend URL is correct
 public class LinkController {
 
     @Autowired
