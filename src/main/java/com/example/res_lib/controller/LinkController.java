@@ -10,16 +10,20 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/links")
-//new url
-@CrossOrigin(origins = "learn-frontapp.azurewebsites.net") // Ensure the frontend URL is correct
+@CrossOrigin(origins = "https://learn-frontapp.azurewebsites.net") // Allow requests from frontend
 public class LinkController {
 
     @Autowired
     private LinkService linkService;
 
+    // Basic hello message at the root ("/")
+    @GetMapping("/")
+    public ResponseEntity<String> hello() {
+        return ResponseEntity.ok("Hello! Backend is running fine on learn-backapp.azurewebsites.net");
+    }
+
     // Method to save links in the database
-    @PostMapping("/{teamName}/map")
+    @PostMapping("/api/links/{teamName}/map")
     public ResponseEntity<Map<String, List<Link>>> mapLinks(
             @PathVariable String teamName,
             @RequestBody List<Link> links) {
