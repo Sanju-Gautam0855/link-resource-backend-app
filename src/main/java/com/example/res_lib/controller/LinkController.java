@@ -11,7 +11,7 @@ import java.util.Map;
 
 @RestController
 //Prod
-@CrossOrigin(origins = "https://learn-frontapp.azurewebsites.net")
+@CrossOrigin(origins = "https://ashy-dune-0d21c5600.5.azurestaticapps.net")
 //Dev
 //@CrossOrigin(origins = "https://localhost:3030") // Allow requests from frontend
 public class LinkController {
