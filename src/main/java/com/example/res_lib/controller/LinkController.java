@@ -10,7 +10,10 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@CrossOrigin(origins = "https://learn-frontapp.azurewebsites.net") // Allow requests from frontend
+//Prod
+@CrossOrigin(origins = "https://learn-frontapp.azurewebsites.net")
+//Dev
+//@CrossOrigin(origins = "https://localhost:3030") // Allow requests from frontend
 public class LinkController {
 
     @Autowired
