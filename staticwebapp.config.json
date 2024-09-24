@@ -1,0 +1,8 @@
+{
+  "routes": [
+    {
+      "route": "/api/*",
+      "rewrite": "https://res.azurewebsites.net/api/*"
+    }
+  ]
+}
